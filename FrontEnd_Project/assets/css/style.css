@@ -1,4 +1,4 @@
-body header #nav .my-buttons a, body main #main-head .main-head-my-content a, body main #chooseplan .chooseplan-plans .chooseplan-plans-footer a, .my-buttonback {
+body header #nav .my-buttons a, body main #main-head .main-head-my-content a, body main #uiux .uiux-content .my-buttonback, body main #chooseplan .chooseplan-plans .chooseplan-plans-footer a, .my-buttonback {
   background-color: #13c4a1;
   border: 1px solid #13c4a1;
   text-align: center;
@@ -16,9 +16,15 @@ body {
 }
 
 body header #nav {
-  position: relative;
+  position: absolute;
+  right: 0;
+  left: 0;
   z-index: 2;
   margin: 30px 0px;
+}
+
+body header #nav .my-logo {
+  cursor: pointer;
 }
 
 body header #nav .my-dropdowns ul {
@@ -31,6 +37,29 @@ body header #nav .my-dropdowns ul {
   display: flex;
 }
 
+body header #nav .my-dropdowns ul li:nth-of-type(1):hover .nav-dropdown {
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+body header #nav .my-dropdowns ul li:nth-of-type(4):hover .nav-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+body header #nav .my-dropdowns ul li:nth-of-type(5):hover .nav-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+body header #nav .my-dropdowns ul li {
+  position: relative;
+  padding: 0;
+}
+
 body header #nav .my-dropdowns ul li a {
   font-weight: 500;
   color: #4a6f8a;
@@ -41,6 +70,12 @@ body header #nav .my-dropdowns ul li a {
   margin-left: 13px;
   margin-right: 13px;
   text-decoration: none;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+body header #nav .my-dropdowns ul li a:hover {
+  color: #13c4a1;
 }
 
 body header #nav .my-dropdowns ul li a i {
@@ -48,6 +83,58 @@ body header #nav .my-dropdowns ul li a i {
   position: relative;
   top: 2px;
   margin-left: 5px;
+}
+
+body header #nav .my-dropdowns ul li .nav-dropdown {
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: absolute;
+  border: none;
+  top: 40px;
+  left: 0;
+  width: 250px;
+  z-index: 99;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin-top: 20px;
+  border-top: 2px solid #13c4a1;
+  padding: 0;
+  border-radius: 5px;
+}
+
+body header #nav .my-dropdowns ul li .nav-dropdown li {
+  position: relative;
+  padding: 0px 15px;
+}
+
+body header #nav .my-dropdowns ul li .nav-dropdown li h3 {
+  font-size: 17px;
+  margin-top: 20px;
+  border-bottom: 1px dashed #e5e5e5;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+body header #nav .my-dropdowns ul li .nav-dropdown li a {
+  display: block;
+  padding: 13px 0px 11px;
+  margin: 0;
+  color: #4a6f8a;
+  border-top: 1px dashed #e5e5e5;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+body header #nav .my-dropdowns ul li .nav-dropdown li a:hover {
+  color: #13c4a1;
 }
 
 body header #nav .my-buttons {
@@ -64,13 +151,17 @@ body header #nav .my-buttons a:last-child {
   border: 1px solid white;
 }
 
+body main #main-head {
+  position: relative;
+}
+
 body main #main-head .main-head-my-content {
   margin-top: 270px;
   padding: 0px 120px;
 }
 
 body main #main-head .main-head-my-content h1 {
-  font-size: 55px;
+  font-size: 57px;
   font-weight: 600;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -99,26 +190,114 @@ body main #main-head .main-head-my-content a i {
   margin-right: 5px;
 }
 
-body main #main-head .owl-item1 {
+body main #main-head .owl-carousel {
+  position: relative;
+}
+
+body main #main-head .owl-carousel .owl-stage-outer .owl-stage .owl-item .inner-owl-item {
+  height: 100vh;
+  border-bottom-left-radius: 70px;
+}
+
+body main #main-head .owl-carousel .owl-stage-outer .owl-stage .owl-item .inner-owl-item1 {
   background-image: url("../img/banner-img1.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom-left-radius: 70px;
 }
 
-body main #main-head .owl-item2 {
+body main #main-head .owl-carousel .owl-stage-outer .owl-stage .owl-item .inner-owl-item2 {
   background-image: url("../img/banner-img2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-body main #main-head .owl-item3 {
+body main #main-head .owl-carousel .owl-stage-outer .owl-stage .owl-item .inner-owl-item3 {
   background-image: url("../img/banner-img3.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body main #main-head .mainhead-shape1 {
+  position: absolute;
+  right: 55%;
+  bottom: 5%;
+  z-index: -1;
+  -webkit-animation: shape1 3s linear infinite;
+          animation: shape1 3s linear infinite;
+}
+
+body main #main-head .mainhead-shape1 img {
+  max-width: 100%;
+}
+
+body main #main-head .mainhead-shape2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+  -webkit-animation: shape2 3s linear infinite;
+          animation: shape2 3s linear infinite;
+}
+
+body main #main-head .mainhead-shape2 img {
+  max-width: 100%;
+}
+
+body main #main-head .mainhead-shape3 {
+  position: absolute;
+  right: 35%;
+  bottom: -25px;
+  z-index: -1;
+  -webkit-animation: shape1 5s linear infinite;
+          animation: shape1 5s linear infinite;
+}
+
+body main #main-head .mainhead-shape3 img {
+  max-width: 100%;
+}
+
+body main #main-head .mainhead-shape4 {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  z-index: -1;
+  -webkit-animation: shape3 3s linear infinite;
+          animation: shape3 3s linear infinite;
+}
+
+body main #main-head .mainhead-shape4 img {
+  max-width: 100%;
+}
+
+body main #main-head .mainhead-shape5 {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  z-index: -1;
+  -webkit-animation: shape4 3s linear infinite;
+          animation: shape4 3s linear infinite;
+}
+
+body main #main-head .mainhead-shape5 img {
+  max-width: 100%;
+}
+
+body main #main-head .mainhead-shape6 {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  z-index: -1;
+  -webkit-animation: shape1 4s linear infinite;
+          animation: shape1 4s linear infinite;
+}
+
+body main #main-head .mainhead-shape6 img {
+  max-width: 100%;
 }
 
 body main #plans {
@@ -133,6 +312,14 @@ body main #plans .main-plans {
   padding: 30px;
   border-radius: 30px;
   border-top-left-radius: 0px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+body main #plans .main-plans:hover {
+  -webkit-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.08);
+  margin-top: -5px;
 }
 
 body main #plans .main-plans i {
@@ -168,19 +355,6 @@ body main #uiux {
   padding: 100px 0px;
 }
 
-body main #uiux ::before {
-  position: absolute;
-  right: 0;
-  content: '';
-  top: 0;
-  width: 45%;
-  height: 215%;
-  z-index: -1;
-  background-color: #fbfbfb;
-  -webkit-transform: skewY(-66deg);
-          transform: skewY(-66deg);
-}
-
 body main #uiux .uiux-content .uiux-logo {
   margin-bottom: 20px;
 }
@@ -196,6 +370,46 @@ body main #uiux .uiux-content p {
   line-height: 1.8;
   font-size: 15px;
   margin-bottom: 30px;
+}
+
+body main #uiux .uiux-content .uiux-box {
+  color: #4a6f8a;
+  background-color: #fff;
+  border: 1px solid #f2effc;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(12, 0, 46, 0.04);
+          box-shadow: 0 2px 4px 0 rgba(12, 0, 46, 0.04);
+  border-radius: 30px;
+  font-size: 15px;
+  padding: 12px 22px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body main #uiux .uiux-content .uiux-box:hover {
+  background-color: #13c4a1;
+  color: #fff;
+  padding-left: 25px;
+}
+
+body main #uiux .uiux-content .uiux-box:hover i {
+  color: white;
+}
+
+body main #uiux .uiux-content .uiux-box i {
+  color: #13c4a1;
+  margin-right: 10px;
+}
+
+body main #uiux .uiux-content .my-buttonback {
+  background-color: #080a3c;
+  border: none;
+}
+
+body main #uiux .uiux-content .my-buttonback i {
+  color: #ff612f;
+  margin-right: 10px;
 }
 
 body main #uiux .uiux-image img {
@@ -284,6 +498,75 @@ body main #ouramazing .ouramazing-card {
   border-radius: 5px;
 }
 
+body main #ouramazing .ouramazing-card .our-my-card1 {
+  background-color: #ffd7cb;
+  color: #ff612f;
+}
+
+body main #ouramazing .ouramazing-card .our-my-card2 {
+  background-color: #bce9e5;
+  color: #13c4a1;
+}
+
+body main #ouramazing .ouramazing-card .our-my-card3 {
+  background-color: #b2b3c3;
+  color: #080a3c;
+}
+
+body main #ouramazing .ouramazing-card .our-my-card4 {
+  background-color: #fed2e1;
+  color: #fc4c86;
+}
+
+body main #ouramazing .ouramazing-card .our-my-card5 {
+  background-color: #ffecbf;
+  color: #ffb300;
+}
+
+body main #ouramazing .ouramazing-card .our-my-card6 {
+  background-color: #bcd2fd;
+  color: #286efa;
+}
+
+body main #ouramazing .ouramazing-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+body main #ouramazing .ouramazing-card:hover .ouramazing-backicon {
+  opacity: 0;
+}
+
+body main #ouramazing .ouramazing-card:hover .ouramazing-icon i {
+  color: white;
+}
+
+body main #ouramazing .ouramazing-card:hover .our-my-card1 {
+  background-color: #ff612f;
+}
+
+body main #ouramazing .ouramazing-card:hover .our-my-card2 {
+  background-color: #13c4a1;
+}
+
+body main #ouramazing .ouramazing-card:hover .our-my-card3 {
+  background-color: #080a3c;
+}
+
+body main #ouramazing .ouramazing-card:hover .our-my-card4 {
+  background-color: #fc4c86;
+}
+
+body main #ouramazing .ouramazing-card:hover .our-my-card5 {
+  background-color: #ffb300;
+}
+
+body main #ouramazing .ouramazing-card:hover .our-my-card6 {
+  background-color: #286efa;
+}
+
 body main #ouramazing .ouramazing-card .ouramazing-icon {
   width: 85px;
   height: 85px;
@@ -296,6 +579,8 @@ body main #ouramazing .ouramazing-card .ouramazing-icon {
 }
 
 body main #ouramazing .ouramazing-card .ouramazing-icon i {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   line-height: 85px;
 }
 
@@ -977,12 +1262,172 @@ body footer #page-end .page-end-copyright p a {
   transition: 0.5s;
 }
 
+@-webkit-keyframes shape1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes shape1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes shape2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes shape2 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shape3 {
+  0% {
+    left: 5%;
+    top: 15%;
+  }
+  25% {
+    left: 5.4%;
+    top: 15.4%;
+  }
+  50% {
+    left: 5%;
+    top: 15%;
+  }
+  75% {
+    left: 4.6%;
+    top: 14.6%;
+  }
+  100% {
+    left: 5%;
+    top: 15%;
+  }
+}
+
+@keyframes shape3 {
+  0% {
+    left: 5%;
+    top: 15%;
+  }
+  25% {
+    left: 5.4%;
+    top: 15.4%;
+  }
+  50% {
+    left: 5%;
+    top: 15%;
+  }
+  75% {
+    left: 4.6%;
+    top: 14.6%;
+  }
+  100% {
+    left: 5%;
+    top: 15%;
+  }
+}
+
+@-webkit-keyframes shape4 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  75% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes shape4 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  75% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .uiux-box {
   color: #4a6f8a;
   background-color: #fff;
   border: 1px solid #f2effc;
-  -webkit-box-shadow: 0, 2px, 4px, 0 rgba(12, 0, 46, 0.04);
-          box-shadow: 0, 2px, 4px, 0 rgba(12, 0, 46, 0.04);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(12, 0, 46, 0.04);
+          box-shadow: 0 2px 4px 0 rgba(12, 0, 46, 0.04);
   border-radius: 30px;
   font-size: 15px;
   padding: 12px 22px;
@@ -990,6 +1435,16 @@ body footer #page-end .page-end-copyright p a {
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.uiux-box:hover {
+  background-color: #13c4a1;
+  color: #fff;
+  padding-left: 25px;
+}
+
+.uiux-box:hover i {
+  color: white;
 }
 
 .uiux-box i {
@@ -1005,5 +1460,19 @@ body footer #page-end .page-end-copyright p a {
 .my-buttonback i {
   color: #ff612f;
   margin-right: 10px;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 5px;
+  left: 46%;
+}
+
+.owl-dots .owl-dot:hover span {
+  background-color: #13c4a1 !important;
+}
+
+.owl-dots .active span {
+  background-color: #13c4a1 !important;
 }
 /*# sourceMappingURL=style.css.map */
