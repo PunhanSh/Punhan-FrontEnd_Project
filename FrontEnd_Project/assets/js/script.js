@@ -103,10 +103,10 @@ $(".my-carousel2").owlCarousel({
     0: {
       items: 1,
     },
-    600: {
+    768: {
       items: 2,
     },
-    1000: {
+    992: {
       items: 2,
     },
   },
