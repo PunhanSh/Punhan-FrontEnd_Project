@@ -1798,7 +1798,6 @@ main #ouramazing .ouramazing-6.ouramazing-active {
 main #chooseplan {
   padding: 100px 0px 70px 0px;
   background-color: #f4f5fe;
-  position: relative;
 }
 
 main #chooseplan h1 {
@@ -1838,8 +1837,10 @@ main #chooseplan .chooseplan-plans {
   padding-bottom: 30px;
   border-radius: 5px;
   color: #080a3c;
+  position: relative;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  overflow: hidden;
 }
 
 main #chooseplan .chooseplan-plans:hover {
@@ -1847,6 +1848,29 @@ main #chooseplan .chooseplan-plans:hover {
           transform: translateY(-10px);
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+main #chooseplan .chooseplan-plans .chooseplan-plans-yearly {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 715px;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding-bottom: 30px;
+  border-radius: 5px;
+  color: #080a3c;
+  z-index: 3;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  visibility: hidden;
+}
+
+main #chooseplan .chooseplan-plans .chooseplan-plans-yearly.active {
+  visibility: visible;
+  top: 0;
 }
 
 main #chooseplan .chooseplan-plans .chooseplan-plans-head {

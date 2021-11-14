@@ -124,32 +124,35 @@ window.addEventListener("scroll", (e) => {
     }
 });
 
-let allyearly = document.getElementsByClassName("chooseplan-all-yearly")[0];
+let allyearly = document.getElementsByClassName("chooseplan-plans-yearly");
 let monthly = document.getElementById("monthly");
 let yearly = document.getElementById("yearly");
 
 yearly.addEventListener("click", (e) => {
   e.preventDefault();
+  for (let i = 0; i < allyearly.length; i++) {
+    monthly.style.color = "#8d8fb4";
+    monthly.style.backgroundColor = "#fff";
 
-  monthly.style.color = "#8d8fb4";
-  monthly.style.backgroundColor = "#fff";
+    yearly.style.color = "#fff";
+    yearly.style.backgroundColor = "#080a3c";
 
-  yearly.style.color = "#fff";
-  yearly.style.backgroundColor = "#080a3c";
-
-  allyearly.classList.add("active")
+    allyearly[i].classList.add("active")    
+  }  
 });
 
 monthly.addEventListener("click", (e) => {
   e.preventDefault();
 
-  yearly.style.color = "#8d8fb4";
-  yearly.style.backgroundColor = "#fff";
+  for (let i = 0; i < allyearly.length; i++) {    
+    yearly.style.color = "#8d8fb4";
+    yearly.style.backgroundColor = "#fff";
 
-  monthly.style.color = "#fff";
-  monthly.style.backgroundColor = "#080a3c";
+    monthly.style.color = "#fff";
+    monthly.style.backgroundColor = "#080a3c";
 
-  allyearly.classList.remove("active");
+    allyearly[i].classList.remove("active");    
+  }
 });
 
 
