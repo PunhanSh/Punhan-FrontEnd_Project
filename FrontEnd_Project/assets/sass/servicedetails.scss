@@ -1,0 +1,9 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+@import "partials/responsive";
+@import "partials/buttons";
+@import "partials/servicedetails/header";
+@import "partials/servicedetails/main";
+@import "partials/servicedetails/footer";

@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 let accordionclick = document.querySelectorAll(".gettoknow-accordion ul li a")
 let accordionicon = document.querySelectorAll(".gettoknow-accordion ul li a i")
-let accordiontext = document.querySelectorAll(".gettoknow-accordion ul li p")
+let accordiontext = document.querySelectorAll(".gettoknow-accordion ul li")
 console.log(accordiontext)
 for (let i = 0; i < accordionclick.length; i++) {
   accordionclick[i].addEventListener("click", e => {
@@ -68,6 +68,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//meetour
 let meetourexpertsscroll = document.getElementsByClassName("meetourexperts-card")
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > window.innerHeight + 5800) {
@@ -77,6 +78,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+//youtube-video
 let youtubevideofooterscroll = document.getElementsByClassName("youtubevideo-footer")[0]
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > window.innerHeight + 3900) {
@@ -94,14 +97,14 @@ window.addEventListener("scroll", () => {
 
 $(".my-carousel2").owlCarousel({
   loop: true,
-  margin: 10,
+  margin: 25,
   nav: true,
   dots:true,
   autoplay:true,
   responsiveClass: true,
   responsive: {
     0: {
-      items: 1,
+      items: 2,
     },
     768: {
       items: 2,
@@ -150,6 +153,7 @@ monthly.addEventListener("click", (e) => {
 });
 
 
+//Gotop
 let pagetop = document.querySelector(".go-top-button")
 
 window.addEventListener("scroll",() =>{
@@ -162,3 +166,4 @@ window.addEventListener("scroll",() =>{
 pagetop.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
+

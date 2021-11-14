@@ -2,6 +2,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+@import "partials/responsive";
 @import "partials/buttons";
 @import "partials/index/header";
 @import "partials/index/main";

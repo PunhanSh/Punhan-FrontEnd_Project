@@ -166,3 +166,70 @@ header{
         }
     }
 }
+
+
+@keyframes shape1{
+    0%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(15px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes shape2{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes shape3{
+    0%{
+        left: 5%;
+        top: 15%;
+    }
+    25%{
+        left: 5.4%;
+        top: 15.4%;
+    }
+    50%{
+        left: 5%;
+        top: 15%;
+    }
+    75%{
+        left: 4.6%;
+        top: 14.6%;
+    }
+    100%{
+        left: 5%;
+        top: 15%;
+    }
+}
+@keyframes shape4{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    75%{
+        transform: translateY(5px);
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
