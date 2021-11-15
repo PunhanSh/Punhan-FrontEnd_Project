@@ -100,11 +100,14 @@
                         font-weight: 400;
                         &:focus{
                             border-color: #13c4a1;
+                            box-shadow: none;
                         }
                     }
                     textarea{
                         &:focus{
                             border-color: #13c4a1;
+                            box-shadow: none;
+
                         }
                         &::placeholder{
                             font-size: 14px;
@@ -162,6 +165,15 @@
                         text-decoration: none;
                         display: inline-block;
                         color: #13c4a1;
+                        transition: 0.5s;                        
+                        &:hover{
+                            color: #ff612f;
+                        }
+                    }
+                    .seconda{
+                        &:hover{
+                            color: #13c4a1 !important;
+                        }
                     }
                     span{
                         display: block;
@@ -189,6 +201,12 @@
                             color: #aba5a5;
                             font-size: 20px;
                             position: relative;
+                            transition: 0.5s;
+                            &:hover{
+                                color: #fff;
+                                border-color: #13c4a1;
+                                background-color: #13c4a1;
+                            }
                             i{
                                 font-size: 16px;
                                 position: absolute;

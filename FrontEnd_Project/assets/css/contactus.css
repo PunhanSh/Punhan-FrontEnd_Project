@@ -1323,10 +1323,14 @@ header #nav .container .container .buttoninner .my-buttons .button-nobg {
 
 #contact-section .contact-all .contact-right form .form-group input:focus {
   border-color: #13c4a1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #contact-section .contact-all .contact-right form .form-group textarea:focus {
   border-color: #13c4a1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #contact-section .contact-all .contact-right form .form-group textarea::-webkit-input-placeholder {
@@ -1406,6 +1410,16 @@ header #nav .container .container .buttoninner .my-buttons .button-nobg {
   text-decoration: none;
   display: inline-block;
   color: #13c4a1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#contact-section .contact-all .contact-info .contact-info-text h2 a:hover {
+  color: #ff612f;
+}
+
+#contact-section .contact-all .contact-info .contact-info-text h2 .seconda:hover {
+  color: #13c4a1 !important;
 }
 
 #contact-section .contact-all .contact-info .contact-info-text h2 span {
@@ -1438,6 +1452,14 @@ header #nav .container .container .buttoninner .my-buttons .button-nobg {
   color: #aba5a5;
   font-size: 20px;
   position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#contact-section .contact-all .contact-info .contact-info-text ul li a:hover {
+  color: #fff;
+  border-color: #13c4a1;
+  background-color: #13c4a1;
 }
 
 #contact-section .contact-all .contact-info .contact-info-text ul li a i {
