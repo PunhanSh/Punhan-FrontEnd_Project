@@ -11,3 +11,18 @@ window.addEventListener("scroll",() =>{
 pagetop.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
+
+window.addEventListener("scroll", (e) => {
+  if (window.pageYOffset > 200) {
+    document.getElementById("nav").classList.add("active"); 
+   } 
+   else {
+      document.getElementById("nav").classList.remove("active");
+    }
+});
+
+let navclick = document.getElementsByClassName("navdot")[0];
+
+navclick.addEventListener("click", () => {
+  navclick.nextElementSibling.classList.toggle("active")
+})

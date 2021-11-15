@@ -812,3 +812,154 @@
         }
     }
 }
+
+//Navbar
+@media only screen and (max-width: 1400px){
+    .nav-nav{
+        a{
+            margin-right: auto;
+        }
+        .button-nobg{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px){
+    #nav{
+        margin: 0 !important;
+        &.active {
+            position: fixed !important;
+            margin: 30px 0px !important;
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09%) !important;
+            z-index: 100 !important;
+            top: -30px !important;    
+            background-color: #fff !important;
+            animation: nav1 1s !important;    
+            align-items: center !important;  
+            .my-buttons{
+                a{
+                    transition: 0.5s !important;
+                    &:hover{
+                        background-color: #080a3c !important;
+                    }
+                }      
+                .button-nobg {
+                    border-color: #080a3c !important;
+                    a{
+                        color: #fff !important;
+                    }
+                    &:hover{
+                        background-color: #13c4a1 !important;
+                    }
+                    i{
+                        color: white !important;
+                    }
+                }
+            }
+            
+            .nav-logo{
+                margin-top: auto !important;
+            }
+    
+        }
+        @keyframes nav1{
+            0%{
+                transform: translateY(-150px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        .nav-responsive{
+            display: block !important;
+            .nav-responsivemenu{
+                position: relative !important;
+                .nav-logo{
+                    position: relative !important;
+                    width: 50% !important;
+                    z-index: 999 !important;
+                    font-weight: 700 !important;
+                    font-size: 25px !important;
+                }
+                .nav-responsivebar{
+                    width: 35px !important;
+                    height: 30px !important;
+                    position: absolute !important;
+                    cursor: pointer !important;
+                    text-decoration: none !important;
+                    text-indent: -9999em !important;
+                    line-height: 22px !important;
+                    font-size: 1px !important;
+                    display: block !important;
+                    font-weight: 700 !important;
+                    padding-top: 9px !important;
+                    right: 20px !important;
+                    top: 0 !important;
+                    span{
+                        background: #080a3c !important;
+                        display: block;
+                        height: 4px !important;
+                        margin-top: 3px !important;
+                        border-radius: 3px !important;
+                    }
+                }
+            }
+        }
+        .nav-nav{
+            display: none;
+        }
+        .navthreedots{
+            display: block !important;
+            .navdot{
+                padding: 0 10px !important;
+                height: 30px !important;
+                cursor: pointer !important;
+                z-index: 9991 !important;
+                position: absolute !important;
+                right: 90px !important;
+                top: 22px !important;
+                .circles{
+                    display: flex !important;
+                    align-items: center !important;
+                    height: 30px !important;
+                    .circle-one{
+                        height: 5px !important;
+                        width: 5px !important;
+                        border-radius: 100% !important;
+                        margin: 0 2px !important;
+                        transition: .5s !important;
+                        background-color: #080a3c !important;
+                    }
+                    .circle-two{
+                        height: 5px !important;
+                        width: 5px !important;
+                        border-radius: 100% !important;
+                        margin: 0 2px !important;
+                        transition: .5s !important;
+                        background-color: #080a3c !important;
+                    }
+                    .circle-three{
+                        height: 5px !important;
+                        width: 5px !important;
+                        border-radius: 100% !important;
+                        margin: 0 2px !important;
+                        transition: .5s !important;
+                        background-color: #080a3c !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px){
+    #login{
+        .login-image{
+            img{
+                display: inline-block !important;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){}

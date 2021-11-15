@@ -1,20 +1,22 @@
 header{
     #nav{
-        position: fixed;
+        
+        position: absolute;
         right: 0;
         left: 0;
-        z-index: 2;
+        z-index: 42;
         margin: 20px 0px;
         &.active {
             position: fixed;
             padding: 30px 0px;
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09%);
-            background-color: #fff;
+            z-index: 100;
             top: -30px;    
-            animation: nav1 1s;            
+            background-color: #fff;
+            animation: nav1 1s;
             .button-nobg {
-                border-color: #080a3c !important;
                 color: #080a3c !important;
+                border-color: #080a3c !important;
                 &:hover{
                     color: #fff !important;
                 }
@@ -29,6 +31,8 @@ header{
                 transform: translateY(0);
             }
         }
+        .nav-nav{
+        
         .my-logo{
             cursor: pointer;
             img{}
@@ -147,24 +151,111 @@ header{
                 @extend %button;
                 i{
                     padding-right: 7px;
+                    font-size: 15px;
                 }
 
-                &:last-child{
-                    background-color: transparent;
-                    color: white;
-                    border: 1px solid white;
-                    &:hover{
-                        background-color: #080a3c;
-                        border: 1px solid #080a3c;
-                    }
+                
+                &:hover{
+                    background-color: #080a3c;
+                    border: 1px solid #080a3c;
                 }
+            }
+            .button-nobg{
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
                 &:hover{
                     background-color: #080a3c;
                     border: 1px solid #080a3c;
                 }
             }
         }
+    
     }
+    .nav-responsive{
+        display: none;
+        .nav-responsivemenu{
+            .nav-logo{
+                a{
+                    transition: .5s;
+                    color: #080a3c;
+                    text-decoration: none;
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .nav-responsivebar{
+                a{
+                    span{}
+                }
+                .mean-nav{
+                    .nav-item{
+                        a{
+
+                        }
+                    }
+                }
+            }           
+        }
+    }
+    .navthreedots{
+        display: none;
+        .navdot{
+            .circles{
+                .circle-one{}
+                .circle-two{}
+                .circle-three{}
+            }
+        }
+    }
+    .container{
+        .container{
+            position: absolute;
+            right: 50px;
+            top: 65px;
+            max-width: 260px;
+            background-color: #fff;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+            margin-left: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+            transform: scaleX(0);
+            z-index: 2;
+            padding: 15px;
+            border-radius: 5px;
+            &.active{
+                visibility: visible;
+                opacity: 1;
+                transform: scaleX(1);
+            }
+            .buttoninner{
+                .my-buttons{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px 15px;
+                        background-color: #13c4a1;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        i{
+                            padding-right: 5px;
+                        }
+                    }
+                    .button-nobg{
+                        margin-left: 10px;
+                        background-color: #080a3c;
+                        i{}
+                    }
+                }
+            }
+        }
+    }
+    }
+    
+    
 }
 
 
@@ -233,3 +324,4 @@ header{
         transform: translateX(0);
     }
 }
+

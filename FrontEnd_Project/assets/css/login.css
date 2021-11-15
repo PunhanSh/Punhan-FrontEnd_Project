@@ -757,6 +757,169 @@ body {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .nav-nav a {
+    margin-right: auto;
+  }
+  .nav-nav .button-nobg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #nav {
+    margin: 0 !important;
+  }
+  #nav.active {
+    position: fixed !important;
+    margin: 30px 0px !important;
+    -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09) !important;
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09) !important;
+    z-index: 100 !important;
+    top: -30px !important;
+    background-color: #fff !important;
+    -webkit-animation: nav1 1s !important;
+            animation: nav1 1s !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  #nav.active .my-buttons a {
+    -webkit-transition: 0.5s !important;
+    transition: 0.5s !important;
+  }
+  #nav.active .my-buttons a:hover {
+    background-color: #080a3c !important;
+  }
+  #nav.active .my-buttons .button-nobg {
+    border-color: #080a3c !important;
+  }
+  #nav.active .my-buttons .button-nobg a {
+    color: #fff !important;
+  }
+  #nav.active .my-buttons .button-nobg:hover {
+    background-color: #13c4a1 !important;
+  }
+  #nav.active .my-buttons .button-nobg i {
+    color: white !important;
+  }
+  #nav.active .nav-logo {
+    margin-top: auto !important;
+  }
+  @-webkit-keyframes nav1 {
+    0% {
+      -webkit-transform: translateY(-150px);
+              transform: translateY(-150px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes nav1 {
+    0% {
+      -webkit-transform: translateY(-150px);
+              transform: translateY(-150px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  #nav .nav-responsive {
+    display: block !important;
+  }
+  #nav .nav-responsive .nav-responsivemenu {
+    position: relative !important;
+  }
+  #nav .nav-responsive .nav-responsivemenu .nav-logo {
+    position: relative !important;
+    width: 50% !important;
+    z-index: 999 !important;
+    font-weight: 700 !important;
+    font-size: 25px !important;
+  }
+  #nav .nav-responsive .nav-responsivemenu .nav-responsivebar {
+    width: 35px !important;
+    height: 30px !important;
+    position: absolute !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    text-indent: -9999em !important;
+    line-height: 22px !important;
+    font-size: 1px !important;
+    display: block !important;
+    font-weight: 700 !important;
+    padding-top: 9px !important;
+    right: 20px !important;
+    top: 0 !important;
+  }
+  #nav .nav-responsive .nav-responsivemenu .nav-responsivebar span {
+    background: #080a3c !important;
+    display: block;
+    height: 4px !important;
+    margin-top: 3px !important;
+    border-radius: 3px !important;
+  }
+  #nav .nav-nav {
+    display: none;
+  }
+  #nav .navthreedots {
+    display: block !important;
+  }
+  #nav .navthreedots .navdot {
+    padding: 0 10px !important;
+    height: 30px !important;
+    cursor: pointer !important;
+    z-index: 9991 !important;
+    position: absolute !important;
+    right: 90px !important;
+    top: 22px !important;
+  }
+  #nav .navthreedots .navdot .circles {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    height: 30px !important;
+  }
+  #nav .navthreedots .navdot .circles .circle-one {
+    height: 5px !important;
+    width: 5px !important;
+    border-radius: 100% !important;
+    margin: 0 2px !important;
+    -webkit-transition: .5s !important;
+    transition: .5s !important;
+    background-color: #080a3c !important;
+  }
+  #nav .navthreedots .navdot .circles .circle-two {
+    height: 5px !important;
+    width: 5px !important;
+    border-radius: 100% !important;
+    margin: 0 2px !important;
+    -webkit-transition: .5s !important;
+    transition: .5s !important;
+    background-color: #080a3c !important;
+  }
+  #nav .navthreedots .navdot .circles .circle-three {
+    height: 5px !important;
+    width: 5px !important;
+    border-radius: 100% !important;
+    margin: 0 2px !important;
+    -webkit-transition: .5s !important;
+    transition: .5s !important;
+    background-color: #080a3c !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #login .login-image img {
+    display: inline-block !important;
+  }
+}
+
 #login .login-image {
   height: 100%;
   width: 100%;
